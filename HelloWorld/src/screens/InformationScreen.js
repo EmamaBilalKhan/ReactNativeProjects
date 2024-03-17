@@ -11,13 +11,13 @@ export default function InformationScreen() {
     const CheckInfo=()=>{
         const isDuplicate = Info.some(info => info.Name === Name && info.FatherName === FatherName && info.RollNumber === RollNumber);
         if (!isDuplicate){
-            setInfo([...Info, { Name, FatherName, RollNumber }]);
+            setInfo([...Info, { Name, FatherName, RollNumber}]);
             setName('');
             setFatherName('');
             setRollNumber('');
         }
         else{
-            alert('This information already exists.');
+            alert('This information already exists');
         }
     };
 

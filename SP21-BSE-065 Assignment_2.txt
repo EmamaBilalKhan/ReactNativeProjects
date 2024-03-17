@@ -1,0 +1,67 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, FlatList, TextInput, Button } from 'react-native';
+import React, { useState } from 'react';
+
+export default function DataScreen() {
+    const [Data, setData] = useState([]);
+    const [FatherName, setFatherName] = useState('');
+    const [Name, setName] = useState('');
+    const [Roll, setRoll] = useState('');
+
+    const UpdateData = () => {
+        const DuplicateInfo = Data.some(info => info.Name === Name && info.FatherName === FatherName && info.Roll === Roll);
+        if (!DuplicateInfo){
+            setData([...Data, { Name, FatherName, Roll }]);
+        }
+    };
+
+    return (
+        <View>
+            <Text>Name: </Text>
+            <TextInput
+                style={styles.TextInput}
+                value={Name}
+                placeholder="Enter Name"
+                onChangeText={newValue => setName(newValue)}
+            />
+            <Text>Father Name: </Text>
+            <TextInput
+                style={styles.TextInput}
+                value={FatherName}
+                placeholder="Enter Father Name"
+                onChangeText={newValue => setFatherName(newValue)}
+            />
+            <Text>Roll Number:</Text>
+            <TextInput
+                style={styles.TextInput}
+                placeholder="Enter Roll Number"
+                value={Roll}
+                onChangeText={newValue => setRoll(newValue)}
+            />
+            <Button title='Add Data' onPress={UpdateData}/>
+            <FlatList
+                data={Data}
+                renderItem={({item})=>{
+                    return(
+                        <Text style={styles.Text}>
+                            Name: {item.Name}, Father Name: {item.FatherName}, Roll # {item.Roll}
+                        </Text>
+                    );
+                }}
+            />
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    TextInput: {
+        margin: 20,
+        borderWidth: 5,
+        borderColor: 'black'
+    },
+    Text: {
+        color: 'black',
+        margin: 3,
+        fontSize: 20
+    }
+});
