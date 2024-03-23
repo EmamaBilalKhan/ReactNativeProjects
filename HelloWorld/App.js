@@ -7,7 +7,7 @@ import TextScreen from './src/screens/TextScreen'
 import FlatScreen from './src/screens/FlatScreen'
 import ColorScreen from './src/screens/ColorScreen'
 import SquareScreen from './src/screens/SquareScreen'
-import SearchScreen from './src/screens/SearchScreen'
+import SearchScreen from './src/screens/SearchScreen2'
 import InformationScreen from './src/screens/InformationScreen'
 const Stack = createNativeStackNavigator();
 
