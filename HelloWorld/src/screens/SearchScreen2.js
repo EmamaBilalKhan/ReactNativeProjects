@@ -60,6 +60,7 @@ const SearchScreen2 =()=>{
 		
 	}
 	/>
+
 	<Text>Bit Pricier</Text>
 	<FlatList
 	horizontal

@@ -19,6 +19,7 @@ export default function SearchBar(props) {
   );
 }
 
+
 const styles = StyleSheet.create({
   background: {
     backgroundColor: '#CCCCCC',

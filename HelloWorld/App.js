@@ -18,12 +18,12 @@ function App(){
     <Stack.Screen name="Home" component={HomeScreen}/>
     <Stack.Screen name="Image" component={ImageScreen}/>
     <Stack.Screen name="Counter" component={CounterScreen}/>
-     <Stack.Screen name="Text" component={TextScreen}/>
-     <Stack.Screen name="Flat" component={FlatScreen}/>
-     <Stack.Screen name="Color" component={ColorScreen}/>
-     <Stack.Screen name="Square" component={SquareScreen}/>
-     <Stack.Screen name="Search" component={SearchScreen}/>
-     <Stack.Screen name="Information" component={InformationScreen}/>
+    <Stack.Screen name="Text" component={TextScreen}/>
+    <Stack.Screen name="Flat" component={FlatScreen}/>
+    <Stack.Screen name="Color" component={ColorScreen}/>
+    <Stack.Screen name="Square" component={SquareScreen}/>
+    <Stack.Screen name="Search" component={SearchScreen}/>
+    <Stack.Screen name="Information" component={InformationScreen}/>
     </Stack.Navigator>
     </NavigationContainer>
     );
