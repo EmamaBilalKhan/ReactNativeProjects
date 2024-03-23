@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { useState } from 'react';
 
-export default function SearchBar() {
+export default function SearchBar(props) {
 
 const [Enable, setEnable] = useState(false);
 
@@ -17,6 +17,9 @@ setEnable(!Enable);
     <TextInput
     placeholder='Search'
     editable = {Enable}
+    value={props.term}
+    onChangeText={()=>props.onTermChange()}
+    onSubmitEditing={()=>props.onTermSubmit()}
     />
   </View>
     );
