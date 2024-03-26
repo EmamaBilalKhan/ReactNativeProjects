@@ -9,6 +9,7 @@ import ColorScreen from './src/screens/ColorScreen'
 import SquareScreen from './src/screens/SquareScreen'
 import SearchScreen from './src/screens/SearchScreen2'
 import InformationScreen from './src/screens/InformationScreen'
+import WeatherScreen from './src/screens/WeatherScreen'
 const Stack = createNativeStackNavigator();
 
 function App(){
@@ -24,6 +25,7 @@ function App(){
     <Stack.Screen name="Square" component={SquareScreen}/>
     <Stack.Screen name="Search" component={SearchScreen}/>
     <Stack.Screen name="Information" component={InformationScreen}/>
+    <Stack.Screen name="Weather" component={WeatherScreen}/>
     </Stack.Navigator>
     </NavigationContainer>
     );

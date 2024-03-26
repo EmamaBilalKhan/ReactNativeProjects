@@ -39,6 +39,10 @@ export default function HomeScreen({navigation}) {
              onPress={()=>navigation.navigate('Information')}>
              <Text style={styles.textStyle}>Go to Information Screen</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.viewStyle}
+             onPress={()=>navigation.navigate('Weather')}>
+             <Text style={styles.textStyle}>Go to Weather Screen</Text>
+      </TouchableOpacity>
     </View>
   );
 }
